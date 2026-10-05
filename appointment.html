@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Appointment Details - Healthcare Portal</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            Healthcare Portal
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="appointment.html">
+                        Appointments
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#health-info">
+                        Health Information
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- Appointment Section -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Appointment Details</h2>
+
+            <p>
+                Your healthcare appointment has been registered successfully.
+            </p>
+
+        </div>
+
+
+        <!-- Appointment Table Card -->
+        <div class="card shadow registration-card mb-5">
+
+            <div class="card-body">
+
+                <h4 class="text-primary mb-4">
+                    Appointment Information
+                </h4>
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover text-center">
+
+                        <thead class="table-primary">
+
+                            <tr>
+                                <th>Appointment ID</th>
+                                <th>Patient Name</th>
+                                <th>Department</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="appointmentTableBody">
+
+                            <tr>
+
+                                <td id="appointmentId"></td>
+
+                                <td id="patientName"></td>
+
+                                <td id="department"></td>
+
+                                <td id="doctor"></td>
+
+                                <td id="appointmentDate"></td>
+
+                                <td id="appointmentTime"></td>
+
+                                <td>
+                                    <span class="badge bg-success">
+                                        Confirmed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Health Information -->
+        <div id="health-info">
+
+            <div class="section-heading">
+
+                <h2>Health Information</h2>
+
+                <p>
+                    Patient health and appointment information
+                </p>
+
+            </div>
+
+
+            <div class="card shadow health-card">
+
+                <div class="card-body">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+
+                            <div class="health-item">
+
+                                <strong>Patient Name:</strong>
+
+                                <span id="healthPatientName"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="health-item">
+
+                                <strong>Blood Group:</strong>
+
+                                <span id="bloodGroup"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="health-item">
+
+                                <strong>Department:</strong>
+
+                                <span id="healthDepartment"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="health-item">
+
+                                <strong>Doctor:</strong>
+
+                                <span id="healthDoctor"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="health-item">
+
+                                <strong>Appointment Date:</strong>
+
+                                <span id="healthDate"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="health-item">
+
+                                <strong>Appointment Time:</strong>
+
+                                <span id="healthTime"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <div class="health-item">
+
+                                <strong>Symptoms / Health Concern:</strong>
+
+                                <span id="symptoms"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <div class="health-item">
+
+                                <strong>Appointment Status:</strong>
+
+                                <span class="badge bg-success">
+                                    Confirmed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Back Button -->
+        <div class="text-center mt-4">
+
+            <a href="index.html" class="btn btn-primary">
+                Back to Registration
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-3">
+
+    <p class="mb-0">
+        © 2026 Healthcare Appointment & Patient Portal
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Page JavaScript -->
+<script>
+
+    // Read patient information from URL
+    const params = new URLSearchParams(window.location.search);
+
+
+    // Get values
+    const patientName = params.get("patientName") || "Not Available";
+    const bloodGroup = params.get("bloodGroup") || "Not Available";
+    const department = params.get("department") || "Not Available";
+    const doctor = params.get("doctor") || "Not Available";
+    const appointmentDate = params.get("appointmentDate") || "Not Available";
+    const appointmentTime = params.get("appointmentTime") || "Not Available";
+    const symptoms = params.get("symptoms") || "Not Available";
+
+
+    // Generate Appointment ID
+    const appointmentId =
+        "APT" + Math.floor(1000 + Math.random() * 9000);
+
+
+    // Appointment table
+    document.getElementById("appointmentId").textContent = appointmentId;
+    document.getElementById("patientName").textContent = patientName;
+    document.getElementById("department").textContent = department;
+    document.getElementById("doctor").textContent = doctor;
+    document.getElementById("appointmentDate").textContent = appointmentDate;
+    document.getElementById("appointmentTime").textContent = appointmentTime;
+
+
+    // Health information
+    document.getElementById("healthPatientName").textContent = patientName;
+    document.getElementById("bloodGroup").textContent = bloodGroup;
+    document.getElementById("healthDepartment").textContent = department;
+    document.getElementById("healthDoctor").textContent = doctor;
+    document.getElementById("healthDate").textContent = appointmentDate;
+    document.getElementById("healthTime").textContent = appointmentTime;
+    document.getElementById("symptoms").textContent = symptoms;
+
+</script>
+
+</body>
+</html>
